@@ -1,0 +1,586 @@
+:root {
+    --primary-blue: #0056b3;
+    --dark-blue: #003366;
+    --light-blue: #f0f5fa;
+    --accent-blue: #3399ff;
+    --pure-white: #ffffff;
+    --dark-text: #222222;
+    --shadow: rgba(0, 51, 102, 0.08);
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f8fafc;
+    color: var(--dark-text);
+    line-height: 1.6;
+}
+
+#login-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--dark-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999999;
+}
+
+.login-card {
+    background: var(--pure-white);
+    width: 100%;
+    max-width: 440px;
+    padding: 2.5rem;
+    box-sizing: border-box;
+    border-radius: 24px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+    border: 1px solid #f0f0f0;
+    text-align: left;
+}
+
+.login-badge {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #a0a0a0;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 0.75rem;
+}
+
+.login-card h2 {
+    font-size: 2.2rem;
+    color: var(--dark-blue);
+    margin: 0 0 1rem 0;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.login-instruction {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1.25rem;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.85rem 1rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    font-size: 0.95rem;
+    box-sizing: border-box;
+    background-color: #fafafa;
+    transition: all 0.2s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--primary-blue);
+    background-color: var(--pure-white);
+    box-shadow: 0 0 0 4px rgba(0, 86, 179, 0.1);
+}
+
+.login-submit-btn {
+    width: 100%;
+    padding: 0.95rem;
+    background: var(--primary-blue);
+    color: var(--pure-white);
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 0.5rem;
+    transition: background 0.2s ease;
+}
+
+.login-submit-btn:hover {
+    background: var(--dark-blue);
+}
+
+.login-error {
+    color: #d93025;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+.login-footer-link {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 1.5rem;
+}
+
+.login-footer-link a {
+    color: var(--primary-blue);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.login-disclaimer {
+    font-size: 0.75rem;
+    color: #999;
+    line-height: 1.4;
+    margin-top: 2rem;
+    border-top: 1px solid #f0f0f0;
+    padding-top: 1rem;
+}
+
+#intro-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--pure-white);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+}
+
+.intro-container {
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.intro-container .logo-img {
+    width: 80px;              
+    height: auto;             
+    display: block;           
+    margin: 0 auto 1.5rem auto; 
+}
+
+.intro-container h1 {
+    font-size: 3.5rem;
+    margin: 1.5rem 0 0.5rem 0;
+    letter-spacing: 4px;
+    font-weight: 800;
+    color: var(--dark-blue);
+}
+
+.intro-container .subtitle {
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    margin-bottom: 2.5rem;
+    color: var(--primary-blue);
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.enter-btn {
+    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--dark-blue) 100%);
+    color: var(--pure-white);
+    border: 2px solid transparent;
+    padding: 1rem 3.5rem;
+    font-size: 1.15rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-bottom: 2rem;
+    box-shadow: 0 8px 20px rgba(0, 86, 179, 0.25);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.enter-btn:hover {
+    background: var(--pure-white);
+    color: var(--primary-blue);
+    border-color: var(--primary-blue);
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 12px 25px rgba(0, 86, 179, 0.35);
+}
+
+.intro-divider {
+    border: none;
+    border-top: 1px solid #e2e8f0;
+    margin-bottom: 1.5rem;
+    width: 100%;
+}
+
+.intro-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.95rem;
+    color: #666;
+    padding: 0 0.5rem;
+}
+
+.intro-footer .college-badge {
+    background: var(--primary-blue);
+    color: var(--pure-white);
+    padding: 0.3rem 1rem;
+    border-radius: 15px;
+    font-weight: bold;
+}
+
+#main-navigation {
+    background-color: var(--pure-white);
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 2rem;
+    box-shadow: 0 4px 15px var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    font-weight: 800;
+    font-size: 1.3rem;
+    color: var(--dark-blue);
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #4a5568;
+    font-weight: 700;
+    font-size: 0.95rem;
+    padding: 8px 18px;
+    border-radius: 30px;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: var(--pure-white) !important;
+    background-color: var(--primary-blue);
+}
+
+header {
+    background: var(--pure-white);
+    color: var(--dark-blue);
+    padding: 4rem 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    border-bottom: 4px solid var(--primary-blue);
+}
+
+.header-container {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.date-badge {
+    background: var(--light-blue);
+    color: var(--primary-blue);
+    padding: 0.4rem 1.2rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+header h1 {
+    font-size: 3.5rem;
+    margin: 1.5rem 0 0.5rem 0;
+    letter-spacing: 4px;
+    font-weight: 800;
+    color: var(--dark-blue);
+}
+
+.logo-img {
+    width: 80px;              
+    height: auto;             
+    display: block;           
+    margin: 15px auto 5px auto; 
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    margin-bottom: 2rem;
+    color: var(--primary-blue);
+    font-weight: 600;
+}
+
+.header-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #e2e8f0;
+    padding-top: 1rem;
+    font-size: 0.95rem;
+    color: #666;
+}
+
+.college-badge {
+    background: var(--primary-blue);
+    color: var(--pure-white);
+    padding: 0.3rem 1rem;
+    border-radius: 15px;
+    font-weight: bold;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.grid-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.card {
+    background: var(--pure-white);
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px var(--shadow);
+    position: relative;
+    border-top: 6px solid var(--primary-blue);
+}
+
+.card h2 {
+    color: var(--dark-blue);
+    margin-top: 0;
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+}
+
+.split-lists {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.list-block h3 {
+    font-size: 1rem;
+    color: var(--primary-blue);
+    margin-bottom: 0.5rem;
+}
+
+ul { padding-left: 1.2rem; margin: 0; }
+li { margin-bottom: 0.6rem; }
+
+.featured-course {
+    background: linear-gradient(135deg, var(--dark-blue) 0%, var(--primary-blue) 100%);
+    color: var(--pure-white);
+    padding: 3rem;
+    border-radius: 12px;
+    margin-bottom: 4rem;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 86, 179, 0.2);
+}
+
+.section-tag {
+    font-size: 0.9rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* =======================================================
+   DISENYO PARA SA COURSE OUTLINE & LESSONS TABS
+   ======================================================= */
+
+.course-viewer {
+    background: var(--pure-white);
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px var(--shadow);
+    margin-bottom: 3rem;
+    border-top: 6px solid var(--primary-blue);
+}
+
+.course-viewer h2 {
+    color: var(--dark-blue);
+    margin-top: 0;
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+}
+
+.instruction-text {
+    color: #666;
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Ginagawa nitong dalawang kolum ang layout */
+.viewer-layout {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+/* Lalagyan ng mga buttons sa kaliwa */
+.lesson-tabs {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+/* Disenyo ng bawat button tab */
+.tab-btn {
+    background: #f8fafc;
+    color: #4a5568;
+    border: 1px solid #e2e8f0;
+    padding: 1rem 1.25rem;
+    border-radius: 8px;
+    text-align: left;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.tab-btn:hover {
+    background: var(--light-blue);
+    color: var(--primary-blue);
+}
+
+/* Kapag active o kasalukuyang pinili ang tab */
+.tab-btn.active {
+    background-color: var(--primary-blue) !important;
+    color: var(--pure-white) !important;
+    border-color: var(--primary-blue);
+}
+
+/* Ang panel sa kanan kung saan lumalabas ang detalye */
+.content-panel {
+    background: #f8fafc;
+    border-radius: 12px;
+    padding: 2rem;
+    min-height: 200px;
+    border: 1px solid #e2e8f0;
+    box-sizing: border-box;
+}
+
+.panel-header {
+border-bottom: 2px solid #e2e8f0;
+padding-bottom: 0.75rem;
+margin-bottom: 1rem;
+}
+.lesson-number {
+font-size: 0.8rem;
+font-weight: 700;
+color: var(--primary-blue);
+letter-spacing: 1px;
+}
+.panel-header h3 {
+margin: 0.25rem 0 0 0;
+color: var(--dark-blue);
+font-size: 1.4rem;
+}
+.lesson-desc {
+color: #4a5568;
+font-size: 1rem;
+line-height: 1.6;
+margin: 0;
+}
+/* Itatago nito ang lahat ng lesson content sa simula */
+.lesson-content {
+display: none;
+}
+/* Ipakita lamang ang lesson content na may active na class */
+.lesson-content.active {
+display: block;
+}
+/* =======================================================
+DISENYO PARA SA COURSE ASSESSMENT CARD
+======================================================= */
+.quiz-section-wrapper {
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 3rem 0;
+width: 100%;
+box-sizing: border-box;
+}
+.assessment-card {
+background: var(--pure-white);
+border-radius: 20px;
+box-shadow: 0 15px 35px rgba(0, 51, 102, 0.08), 0 5px 15px rgba(0, 0, 0, 0.04);
+padding: 3rem 2rem;
+width: 100%;
+max-width: 580px;
+text-align: center;
+border-top: 6px solid var(--primary-blue);
+box-sizing: border-box;
+}
+.trophy-icon {
+font-size: 3.5rem;
+margin-bottom: 1rem;
+display: block;
+}
+.assessment-card h2 {
+color: var(--dark-blue);
+font-size: 2rem;
+font-weight: 700;
+margin: 0 0 1rem 0;
+letter-spacing: -0.5px;
+}
+.assessment-card p {
+color: #555555;
+font-size: 0.95rem;
+line-height: 1.6;
+margin: 0 0 2.5rem 0;
+}
+.quiz-button {
+background: var(--primary-blue);
+color: var(--pure-white);
+border: none;
+border-radius: 50px;
+padding: 1rem 3.5rem;
+font-size: 1rem;
+font-weight: 700;
+letter-spacing: 0.5px;
+cursor: pointer;
+box-shadow: 0 8px 20px rgba(0, 86, 179, 0.25);
+transition: all 0.2s ease-in-out;
+text-transform: uppercase;
+display: inline-block;
+}
+.quiz-button:hover {
+background: var(--dark-blue);
+transform: translateY(-2px);
+box-shadow: 0 12px 25px rgba(0, 86, 179, 0.35);
+}
+.quiz-button:active {
+transform: translateY(0);
+}

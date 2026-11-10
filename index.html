@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skillora - Learning & Skills Development</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="login-screen">
+        <div class="login-card">
+            <span class="login-badge">YOUR LEARNING SPACE</span>
+            <h2>Log in to Skillora</h2>
+            <p class="login-instruction">Log in to open your learning modules and keep your progress in this browser.</p>
+            
+            <div class="login-fields-form">
+                <div class="form-group">
+                    <label for="login-email">Email address</label>
+                    <input type="text" id="login-email" placeholder="eg. group6@gmail.com">
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" placeholder="At least 4 characters">
+                </div>
+                
+                <button type="button" class="login-submit-btn" onclick="validateLogin()">Log In</button>
+            </div>
+            
+            <p id="login-error-msg" class="login-error"></p>
+            
+            <p class="login-footer-link">Don't have an account? <a href="#">Create account</a></p>
+            <p class="login-disclaimer">Student project demo accounts are saved only in this browser. This is not secure authentication for real or sensitive accounts.</p>
+        </div>
+    </div>
+
+    <div id="intro-screen" style="display: none;">
+        <div class="intro-container">
+            <img src="skillora-logo.png" alt="Skillora Logo" class="logo-img" width="80">
+            <h1>SKILLORA</h1>
+            <p class="subtitle">A PLATFORM FOR LEARNING AND SKILLS DEVELOPMENT</p>
+            <button id="enter-btn" class="enter-btn" onclick="startWebsite()">Get Started</button>
+            <hr class="intro-divider">
+            <div class="intro-footer">
+                <span>Presented by Group 6</span>
+                <span class="college-badge">Pateros Technological College</span>
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <div class="header-container">
+            <span class="date-badge" id="current-date-badge"></span>
+            <img src="skillora-logo.png" alt="Skillora Logo" class="logo-img" width="80">
+            <h1>SKILLORA</h1>
+            <p class="subtitle">A PLATFORM FOR LEARNING AND SKILLS DEVELOPMENT</p>
+            <div class="header-footer">
+                <span>Presented by Group 6</span>
+                <span class="college-badge">Pateros Technological College</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <section class="grid-section">
+            <div class="card intro-card">
+                <h2>INTRODUCTION</h2>
+                <p>Skillora is an e-learning platform designed to provide students with an organized, accessible, and engaging learning experience. It offers lessons, learning materials, activities, and assessments to help students develop new knowledge and practical skills.</p>
+            </div>
+            <div class="card platform-card">
+                <h2>SKILLORA PLATFORM</h2>
+                <div class="split-lists">
+                    <div class="list-block">
+                        <h3>What we provide:</h3>
+                        <ul>
+                            <li>Online lessons</li>
+                            <li>Learning materials</li>
+                            <li>Interactive activities</li>
+                            <li>Quizzes and assessments</li>
+                            <li>Progress tracking</li>
+                        </ul>
+                    </div>
+                    <div class="list-block">
+                        <h3>Our Aims:</h3>
+                        <ul>
+                            <li>Make learning accessible</li>
+                            <li>Provide organized lessons</li>
+                            <li>Encourage interactive learning</li>
+                            <li>Develop students' skills</li>
+                            <li>Support self-paced learning</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="featured-course">
+            <span class="section-tag">FEATURED COURSE</span>
+            <h2>Basic Office Administration Skills</h2>
+            <p>A skills-based course that introduces students to essential knowledge and practical skills needed in an office environment.</p>
+        </section>
+
+        <section class="course-viewer">
+            <h2>COURSE OUTLINE & LESSONS</h2>
+            <p class="instruction-text">Click each lesson on the left to see its details on the right:</p>
+            <div class="viewer-layout">
+                <div class="lesson-tabs" id="lessonTabs">
+                    <button class="tab-btn active" data-lesson="1">Lesson 1: Introduction</button>
+                    <button class="tab-btn" data-lesson="2">Lesson 2: Communication</button>
+                    <button class="tab-btn" data-lesson="3">Lesson 3: Computer & Software</button>
+                    <button class="tab-btn" data-lesson="4">Lesson 4: Records Management</button>
+                    <button class="tab-btn" data-lesson="5">Lesson 5: Ethics & Professionalism</button>
+                </div>
+                <div class="content-panel" id="contentPanel">
+                    <div class="lesson-content active" id="lesson-1">
+                        <div class="panel-header"><span class="lesson-number">LESSON 1</span><h3>Introduction to Office Administration</h3></div>
+                        <p class="lesson-desc">Students will learn the basic concepts, roles, responsibilities, and importance of office administration.</p>
+                    </div>
+                    <div class="lesson-content" id="lesson-2">
+                        <div class="panel-header"><span class="lesson-number">LESSON 2</span><h3>Workplace Communication Skills</h3></div>
+                        <p class="lesson-desc">Students will develop proper communication skills for professional interactions in an office setting.</p>
+                    </div>
+                    <div class="lesson-content" id="lesson-3">
+                        <div class="panel-header"><span class="lesson-number">LESSON 3</span><h3>Basic Computer & Office Software Skills</h3></div>
+                        <p class="lesson-desc">Students will learn basic computer functions and common office software used for everyday administrative tasks.</p>
+                    </div>
+                    <div class="lesson-content" id="lesson-4">
+                        <div class="panel-header"><span class="lesson-number">LESSON 4</span><h3>Records and File Management</h3></div>
+                        <p class="lesson-desc">Students will learn how to properly organize, store, manage, and retrieve office records and files.</p>
+                    </div>
+                    <div class="lesson-content" id="lesson-5">
+                        <div class="panel-header"><span class="lesson-number">LESSON 5</span><h3>Professionalism & Workplace Ethics</h3></div>
+                        <p class="lesson-desc">Students will develop professional behavior, responsibility, teamwork, and ethical practices in the workplace.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+      
+      
+        <section class="quiz-section-wrapper">
+          
+            <!-- Quiz Start Lobby -->
+            <div id="quiz-lobby" class="assessment-card active">
+                <div class="trophy-icon">🏆</div>
+                <h2>Course Assessment</h2>
+                <p>Test your knowledge! This comprehensive evaluation contains 25 items from all chapters reviewed above.</p>
+                <button class="quiz-button" onclick="runQuizEngine()">Start Course Quiz</button>
+            </div>
+
+            <!-- Quiz Play Container -->
+            <div id="quiz-container" class="assessment-card" style="display: none;">
+                <div class="quiz-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                    <span id="quiz-lesson-badge" class="lesson-badge"></span>
+                    <span id="quiz-progress-text"></span>
+                </div>
+                
+                <!-- Progress Bar Elements -->
+                <div class="progress-bar-container" style="background: #e0e0e0; border-radius: 4px; height: 10px; margin: 10px 0; width: 100%;">
+                    <div id="quiz-progress-bar" style="background: #0066cc; width: 0%; height: 100%; border-radius: 4px; transition: width 0.3s ease;"></div>
+                </div>
+
+                <!-- Active Question Field -->
+                <h3 id="quiz-question-text" style="margin: 20px 0;"></h3>
+
+                <!-- Active Question Choices (Target for JS UI generation) -->
+                <div id="quiz-choices-container" class="choices-list" style="margin-bottom: 20px; display: flex; flex-direction: column; gap: 10px;"></div>
+
+                <!-- Navigation Control Button -->
+               <button id="check-answer-btn" class="quiz-button" onclick="checkAnswer()">NEXT</button>
+            </div>
+
+            
+<div id="quiz-result-screen" class="assessment-card" style="display: none;">
+    <h2>Quiz Completed!</h2>
+    <p id="quiz-result-text" style="margin: 20px 0; font-size: 1.2rem; font-weight: bold;"></p>
+    
+    
+    <button id="finish-exit-btn" class="quiz-button">FINISH AND EXIT</button>
+</div>
+
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
