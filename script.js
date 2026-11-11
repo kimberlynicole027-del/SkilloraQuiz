@@ -123,7 +123,8 @@ const skilloraQuizBank = [
             "Gardening tools",
             "Cooking equipment",
             "Sports equipment",
-            "Computer and printer"
+            "Computers and printer"
+            
         ],
         answer: "Computers and printer"
     },
@@ -160,7 +161,7 @@ const skilloraQuizBank = [
             "Listen carefully and clarify if needed",
             "Leave the workplace"
         ],
-        answer: "Listen carefully and clarify if neededy"
+        answer: "Listen carefully and clarify if needed"
     },
     {
         lesson: 2,
@@ -182,7 +183,7 @@ const skilloraQuizBank = [
             "Walk away immediately",
             "Listen attentively"
         ],
-        answer: "Listen attentively "
+        answer: "Listen attentively"
     },
     {
         lesson: 2,
@@ -258,7 +259,7 @@ const skilloraQuizBank = [
         lesson: 4,
         question: "What is records management?",
         choices: [
-            "Organizing, storing, and maintaining records ",
+            "Organizing, storing, and maintaining records",
             "Throwing away all documents",
             "Decorating office walls",
             "Purchasing office furniture"
@@ -285,7 +286,7 @@ const skilloraQuizBank = [
                 "A desk lamp" ,
                 "A telephone" 
             ],
-            answer: "A printed employee record "
+            answer: "A printed employee record"
         },
         {
             lesson: 4,
@@ -330,7 +331,7 @@ const skilloraQuizBank = [
                 "Hide the mistake",
                 "Ignore the problem"
             ],
-            answer: "Admit the mistake and help correct it "
+            answer: "Admit the mistake and help correct it"
         },
         {
             lesson: 5,
